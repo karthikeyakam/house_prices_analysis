@@ -2,7 +2,7 @@
 
 Analysing Ames, Iowa housing data taken from Kaggle (https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data). You can refer the following post for detailed understanding (https://medium.com/@krishkk238/house-prices-analysis-70a56ea360ab)
 
-## Environment 
+## Business Understanding and Environment 
 The project was created on Jupyter notebook as a part of Udacity Data Scientist nanodegree program.
 The analysis covers the following points:
 - How are the Sales trending overtime?
@@ -102,3 +102,14 @@ Here's a brief version of what you'll find in the data description file.
 - SaleType: Type of sale
 - SaleCondition: Condition of sale
 
+## Evaluate the Results
+### How are the Sales trending overtime?
+When average Sales is plotted against Year sold, you observe a dip in Sale Price in 2008 through 2010 compared to 2007. I assume that this could be mainly due to the Great Recession lasting from December 2007 to June 2009, which also explains the peak in the sales before 2007.
+
+### How is the presence of a Fireplace impacting the Sale Price? 
+As expected, the average Sale Price increases drastically with a presence of one fireplace by around 33% whereas the increase is around 11% from having 2 fireplaces vs one fireplace. Of course, this will not give us the complete insight as there could be many other factors out of which one main factor would be number of rooms or the size of the house which are co-related. So, for further analysis, I have considered to include number of rooms into my analysis with the fireplace.
+
+I have only considered number of rooms greater than 3 and till 7 for a better analysis. As you can see, along the each value of number of rooms, we have there is a drastic increase in Sale Price with one fireplace compared to one without a fireplace. For houses with 3 rooms there is an increase of Sale Price by 28% and for houses with 4 rooms its 23% and with 5 rooms its 24%.
+
+### How is the Sale Price distributed by different Garage Types?
+If we distribute the Sale Prices against different Garage Types, we observe that houses with Attached Garage and Built-in Garage have higher mean compared to others. Built-in Garage houses have wider distribution between 1st and 3rd quartile. For Attached Garage houses, there are many outliers to be looked into for our analysis.
